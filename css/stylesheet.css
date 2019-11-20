@@ -1,0 +1,358 @@
+body
+{
+    font-family: helvetica;
+    background-color: #6CADDF;
+}
+
+a{text-decoration: none;}
+
+a:visited{ color: #2082CD}
+
+.loginPageLink:hover { text-decoration: underline; color:#2082CD; }
+
+input
+{
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: #e6e6e6;
+    border: none;
+    padding: 5px;
+}
+
+.logReg-container
+{
+    height: auto;
+    width: 700px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logReg-container-header
+{
+    width: 100%;
+    background-color: #2082CD;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    text-align: center;
+    color: white;
+}
+
+.logReg-container-center
+{
+    padding: 30px;
+}
+
+.logReg-button {
+        width: 100%;
+        background-color: #064F87; 
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:none;
+        outline: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+}
+.logReg-button:hover {
+	background-color:#003554;
+}
+.logReg-button:active {
+	background-color:#051923;
+}
+
+.errorMessage{
+    color:red;
+}
+
+.successMessage{
+    color:green;
+}
+
+.custom-container{
+    height: auto;
+    width: 700px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.custom-container-header
+{
+    width: 100%;
+    background-color: #2082CD;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    color: white;
+    margin:0px;
+    text-align: center;
+}
+
+.custom-container-center
+{
+    padding: 30px;
+}
+
+.logout{
+    float: right;
+    width: 30%;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    padding: 15px 15px 20px 15px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #E03616;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+.logout:hover{
+    background-color: #EF233C;
+}
+
+.profilePicture{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.userName{
+    padding-bottom: 30px;
+    font-size:55px;
+    margin:0px;
+}
+
+.userOptionsMenu{
+    list-style-type: none;
+    font-size: 24px;
+    padding:0px;
+    margin: 0px;
+}
+
+.userOptionsMenuItem{
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #5887FF;
+    margin:10px;
+    color: white;
+    font-weight: bold;
+    border-radius:10px;
+}
+
+.userOptionsMenuItem:hover{
+    transition: 0.3s ease;
+    box-shadow: inset 0 0 0 10px #064F87;
+}
+
+.material-icons{
+    font-size: 35px;
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+}
+
+.uploadProfilePicture{
+    float: left;
+    width: 300px;
+    background-color: white;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.submitButton{
+    background-color: #064F87; 
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
+}
+
+.submitButton:hover{
+    background-color:#003554;
+}
+
+.deleteButton{
+    background-color: #E03616; 
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
+}
+
+.deleteButton:hover{
+    background-color:#EF233C;
+}
+
+.colorPicker{
+    margin-top:20px;
+    margin-right: 20px;
+    width: 250px;
+}
+.colorPicker:hover{
+    cursor: pointer;
+}
+
+.backButton{
+    background-color: #D3D3D3; 
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
+}
+
+.backButton:hover{
+    background-color: #B3B3B3;
+}
+
+.roleUser{
+    color:blue;
+}
+
+.roleAdmin{
+    font-weight:bold;
+    color:red;
+}
+
+.roleSuperAdmin{
+    font-weight:bold;
+    color:purple;
+}
+
+.settingsButton{
+    background-color: #ffb82b; 
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
+}
+
+.settingsButton:hover{
+    background-color: #ed9e00;
+}
+.userListContainer{
+   width:80%; 
+}
+
+.userListprofilePicture{
+    border-radius: 50%;
+    height:100px;
+    width: 100px;
+}
+
+table.userTable {
+  border: 1px solid #FFFFFF;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.userTable td, table.userTable th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 2px;
+}
+table.userTable tbody td {
+  font-size: 18px;
+  padding: 15px 0px;
+}
+table.userTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.userTable thead {
+  background: #0B6FA4;
+  border-bottom: 5px solid #FFFFFF;
+}
+table.userTable thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+
+.searchForm{
+    float:right;
+}
+
+
+.userListSearch{
+    width: 450px;
+    margin-right: 20px;
+    border-radius:25px;
+}
+
+.userListSearch:focus{
+    outline: none !important;
+}
+
+.userListSubmitButton{
+    float:right;
+    width: 250px;
+    background-color: #064F87; 
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
+    margin-right: 20px;
+}
+
+.userListSubmitButton:hover{
+    background-color:#003554;
+}
+
+select{
+    height: 50px;
+    width: 150px;
+    background-color: #e6e6e6;
+    border: none;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+option{
+    background-color: white;
+}
+
+
