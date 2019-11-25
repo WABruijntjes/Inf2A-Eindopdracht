@@ -9,6 +9,7 @@ session_start();
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="css/stylesheet.css">
+      <script src="scripts/repeatPasswordCheck.js"></script>
     </head>
     <body>
         <div class="logReg-container">
@@ -18,9 +19,11 @@ session_start();
                 <input type="text" name="userName" placeholder="First name" required>
                 <input type="text" name="userSurname" placeholder="Last name" required>
                 <input type="email" name="userEmail" placeholder="E-mail" required>
-                <input type="password" name="userPassword" placeholder="Password" required>
-                <input type="password" name="userRepeatPassword" placeholder="Repeat Password" required>
-              <button class="logReg-button" type="submit" name="registerSubmit">Sign Up</button>
+                <input type="password" id="password" name="userPassword" placeholder="Password" required onkeyup="checkPass();">
+                <input type="password" id="repeatPassword" name="userRepeatPassword" placeholder="Repeat Password" required onkeyup="checkPass();">
+                <span id="repeatMessage" class="repeatMessage"></span>
+                <br><br>
+                <button id="submitButton" class="logReg-button" type="submit" name="registerSubmit" disabled>Sign Up</button>
               <?php 
                 if(isset($_GET["registerUserExists"])){
                     if($_GET["registerUserExists"] == "true"){

@@ -68,6 +68,10 @@ input
 	background-color:#051923;
 }
 
+.logReg-button:disabled{
+    background-color: #B3B3B3;
+}
+
 .errorMessage{
     color:red;
 }
