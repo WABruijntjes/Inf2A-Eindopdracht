@@ -38,8 +38,8 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
                 <ul class="userOptionsMenu">
                     <a href="userList.php"><li class="userOptionsMenuItem"><i class="material-icons">account_box</i>User List</li></a>
                     <a href="userSettings.php"><li class="userOptionsMenuItem"><i class="material-icons">settings_applications</i>User Settings</li></a>
+                    <a href="webshop.php"><li class="userOptionsMenuItem"><i class="material-icons">shopping_cart</i>Webshop</li></a>
                 </ul>
-            
             </div>
         </div>
     </body>
