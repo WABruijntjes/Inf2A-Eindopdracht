@@ -67,11 +67,9 @@ if(!isset($_GET["orderProduct"])){
                                     € <?php echo number_format((float)$product->productPrice, 2, '.', ''); ?>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="3"><a href="generatePDF.php"><button>Generate invoice</button></a></td>
-                            </tr>
                     </table>
                 </div>
+                <a target="_blank" href="generatePDF.php"><button>Generate invoice</button></a>
                 <form action="webshop_" class="payment" method="GET">
                     <label>
                         <input type="radio" name="payment" value="Visa">

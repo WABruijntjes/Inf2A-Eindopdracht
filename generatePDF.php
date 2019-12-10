@@ -108,6 +108,8 @@ mpdf-->
 </body>
 </html>
 ";
+
+try{
 $mpdf = new \Mpdf\Mpdf([
 	'margin_left' => 20,
 	'margin_right' => 15,
@@ -116,12 +118,14 @@ $mpdf = new \Mpdf\Mpdf([
 	'margin_header' => 10,
 	'margin_footer' => 10
 ]);
-$mpdf->SetProtection(array('print'));
-$mpdf->SetTitle('631290InfHaarlem.com - Invoice');
-$mpdf->SetAuthor('631290InfHaarlem');
-$mpdf->SetWatermarkText('631290InfHaarlem');
-$mpdf->showWatermarkText = true;
-$mpdf->watermark_font = 'DejaVuSansCondensed';
-$mpdf->watermarkTextAlpha = 0.1;
+//$mpdf->SetTitle('631290InfHaarlem.com - Invoice');
+//$mpdf->SetAuthor('631290InfHaarlem');
+//$mpdf->SetWatermarkText('631290InfHaarlem');
+//$mpdf->showWatermarkText = true;
+//$mpdf->watermark_font = 'DejaVuSansCondensed';
+//$mpdf->watermarkTextAlpha = 0.1;
 $mpdf->WriteHTML($html);
 $mpdf->Output();
+}catch (\Mpdf\MpdfException $e) { 
+    echo $e->getMessage();
+}
