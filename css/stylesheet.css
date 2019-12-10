@@ -503,3 +503,25 @@ option{
     width: 150px;
 }
 
+.orderSummary{
+    background-color: #ebf8ff;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.orderProductImage{
+    height: 200px;
+}
+
+.orderProductName{
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.orderProductPrice{
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: right;
+}

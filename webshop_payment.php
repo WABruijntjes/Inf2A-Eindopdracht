@@ -7,7 +7,11 @@ include_once 'Model/Product.php';
 session_start();
 
 if(!isset($_SESSION['login'])){ //if login in session is not set
-    header("Location: login.php");
+    header("Location: index.php");
+}
+
+if(!isset($_GET["orderProduct"])){
+    header("location:index.php");
 }
 ?>
 
@@ -30,7 +34,13 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
             
             $loggedInUser->user_backgroundColorSelect();
             
-            $product = $Webshop_Service->service_getProduct();
+            $product = new product();
+            $product->productID = $_GET["productID"];
+            $product->productName = $_GET["productName"];
+            $product->productPrice = $_GET["productPrice"];
+            $product->productImage = $_GET["productImage"];
+            
+            setcookie("productCookie", serialize($product), time() + 86400); //86400 = 1Day
         ?>
         <div class="custom-container">
             <div class="custom-container-header">
@@ -42,10 +52,29 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
                     <div class="step"></div>
                     <div class="step"></div>
                     <div class="step"></div>
-                </div> 
-                <form class="payment">
+                </div>
+                <h1>Order:</h1>
+                <div class="orderSummary">
+                    <table>
+                            <tr>
+                                <td rowspan="2">
+                                    <img class="orderProductImage" src="images/<?php echo $product->productImage; ?>">
+                                </td>
+                                <td class="orderProductName"><?php echo $product->productName ?></td>
+                            </tr>
+                            <tr>
+                                <td class="orderProductPrice">
+                                    € <?php echo number_format((float)$product->productPrice, 2, '.', ''); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><a href="generatePDF.php"><button>Generate invoice</button></a></td>
+                            </tr>
+                    </table>
+                </div>
+                <form action="webshop_" class="payment" method="GET">
                     <label>
-                        <input type="radio" name="payment" value="Visa" checked>
+                        <input type="radio" name="payment" value="Visa">
                         <img class="paymentImage" src="images/Visa.png">
                      </label>
 
@@ -63,7 +92,7 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
                 </form>
                 </div>
                 <hr>
-                <a href="index.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
+                <a href="webshop.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
             
         </div>
     </body>

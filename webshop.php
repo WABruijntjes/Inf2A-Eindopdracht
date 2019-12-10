@@ -31,6 +31,7 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
             $loggedInUser->user_backgroundColorSelect();
             
             $product = $Webshop_Service->service_getProduct();
+           
         ?>
         <div class="custom-container">
             <div class="custom-container-header">
@@ -53,7 +54,13 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
                     </tr>
                     <tr>
                         <td class="productOrderButton">
-                            <a href="webshop_payment.php"><button class="orderButton">Order</button></a>
+                            <form action="webshop_payment.php" method="GET">
+                                <input name="productID" type="hidden" value="<?php echo $product->productID ;?>">
+                                <input name="productName" type="hidden" value="<?php echo $product->productName ;?>">
+                                <input name="productPrice" type="hidden" value="<?php echo $product->productPrice ;?>">
+                                <input name="productImage" type="hidden" value="<?php echo $product->productImage ;?>">
+                                <input name="orderProduct" type="submit" class="orderButton" value="Order">
+                            </form>
                         </td>
                         <td class="productPrice">
                             € <?php echo number_format((float)$product->productPrice, 2, '.', '');  ?>
