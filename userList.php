@@ -27,8 +27,8 @@ if(isset($_GET["search"])){
         <title>User List</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         
     </head>
     <body>  
@@ -78,7 +78,7 @@ if(isset($_GET["search"])){
                             <td>
                                 <form action="otherUserSettings.php" method="GET">
                                     <?php echo "<input type='hidden' name='userID' value='$user->userID'>"?>
-                                    <button type="submit" class="settingsButton" name="otherUserSettings"><i class="material-icons">settings_applications</i>Settings</button>
+                                    <button type="submit" class="button settingsButton" name="otherUserSettings"><i class="material-icons">settings_applications</i>Settings</button>
                                 </form>
                             </td>
                             <?php
@@ -96,7 +96,7 @@ if(isset($_GET["search"])){
                 }
                 ?>
                 <hr>
-                <a href="index.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
+                <a href="index.php"><button class="button backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
             <?php
                 if(isset($_GET["delete"])){
                     if($_GET["delete"] == "success"){

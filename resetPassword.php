@@ -18,7 +18,7 @@
                     <button class="submitButton" type="submit" name="resetPasswordSubmit">Receive new password by e-mail</button>
                 </form>
                 <br>
-                <a href="login.php"><button class="backButton">BACK</button></a>
+                <a href="login.php"><button class="button backButton">BACK</button></a>
                 
                 <?php 
                 if(isset($_GET["reset"])){

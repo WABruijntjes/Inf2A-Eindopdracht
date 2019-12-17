@@ -80,7 +80,7 @@ if(!isset($_SESSION['login'])){ //if login in session is not set
                     </tr>
                 </table>
                 <hr>
-                <a href="index.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
+                <a href="index.php"><button class="button button backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
             </div>
         </div>
     </body>

@@ -28,4 +28,16 @@ class Webshop_DAO{
         
         return $product; 
     }
+    
+    public function DAO_CRONJOB_changeProductPrice(){
+        $randomPrice = rand(10,100);
+        
+        $conn = $GLOBALS['database']->dbconnect();
+        $webshopQuery = "UPDATE products SET productPrice = ?";
+        $stmt = $conn->prepare($webshopQuery);
+        $stmt->bind_param("d", $randomPrice);
+        $stmt->execute();
+        
+        return $randomPrice;
+    }
 }

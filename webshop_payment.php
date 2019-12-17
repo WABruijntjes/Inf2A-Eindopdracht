@@ -69,7 +69,7 @@ if(!isset($_GET["orderProduct"])){
                             </tr>
                     </table>
                 </div>
-                <a target="_blank" href="generatePDF.php"><button>Generate invoice</button></a>
+                <a target="_blank" href="webshop_generateInvoice.php"><button class="button invoiceButton"><i class="material-icons">picture_as_pdf</i>Generate invoice</button></a>
                 <form action="webshop_" class="payment" method="GET">
                     <label>
                         <input type="radio" name="payment" value="Visa">
@@ -86,11 +86,11 @@ if(!isset($_GET["orderProduct"])){
                         <img class="paymentImage" src="images/PayPal.png">
                      </label>
                     <br><br>
-                    <button type="submit" class="submitButton"><i class="material-icons">payment</i>Pay order</button>
+                    <button type="submit" class="button submitButton"><i class="material-icons">payment</i>Pay order</button>
                 </form>
                 </div>
                 <hr>
-                <a href="webshop.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
+                <a href="webshop.php"><button class="button backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
             
         </div>
     </body>

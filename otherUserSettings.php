@@ -25,8 +25,8 @@ $otherUser = $User_Service->service_userGetOtherUser($userID);
         <title><?php ?> Settings</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
         <?php $loggedInUser->user_backgroundColorSelect(); ?>
@@ -50,7 +50,7 @@ $otherUser = $User_Service->service_userGetOtherUser($userID);
                     
                     <br><br>
                     
-                    <button class="submitButton" type="submit" name="updateOtherUserInfoSubmit"><i class="material-icons">info</i>Update user info</button>
+                    <button class="button submitButton" type="submit" name="updateOtherUserInfoSubmit"><i class="material-icons">info</i>Update user info</button>
                 </form>
                 <?php
                 if(isset($_GET["userInfo"])){
@@ -66,17 +66,17 @@ $otherUser = $User_Service->service_userGetOtherUser($userID);
                         <tr>
                             <h2 class="userSettingh2">Delete profile picture</h2>
                             <td><img class="userListprofilePicture" src="Uploads/<?php echo $otherUser->userProfilePicture ?>"></td>
-                            <td><button class="deleteButton" type="submit" name="deleteProfilePictureSubmit"><i class="material-icons">image</i>Delete</button></td>
+                            <td><button class="button deleteButton" type="submit" name="deleteProfilePictureSubmit"><i class="material-icons">image</i>Delete</button></td>
                         </tr>
                     </table>
                 </form>
             <hr>
             <form action="otherUserSettings_DeleteUserPHP.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="userID" value="<?php echo $otherUser->userID ?>">
-                <button onclick="return confirm('Are you sure you want to delete <?php echo $otherUser->userName.' '.$otherUser->userSurname ?> PERMANENTELY?')" class="deleteButton" type="submit" name="deleteOtherUser"><i class="material-icons">delete_forever</i>DELETE USER</button>
+                <button onclick="return confirm('Are you sure you want to delete <?php echo $otherUser->userName.' '.$otherUser->userSurname ?> PERMANENTELY?')" class="button deleteButton" type="submit" name="deleteOtherUser"><i class="material-icons">delete_forever</i>DELETE USER</button>
             </form>
             <hr>
-            <a href="userList.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
+            <a href="userList.php"><button class="button backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
             </div>
         </div>
         

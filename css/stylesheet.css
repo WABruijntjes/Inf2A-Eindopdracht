@@ -19,6 +19,18 @@ input
     border: none;
     padding: 5px;
 }
+.button{
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
+}
 
 .logReg-container
 {
@@ -164,8 +176,10 @@ input
 .material-icons{
     font-size: 35px;
     position: relative;
-    top: 10px;
+    top: 5px;
     bottom: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .uploadProfilePicture{
@@ -178,16 +192,6 @@ input
 
 .submitButton{
     background-color: #064F87; 
-    border-radius:5px;
-    border:none;
-    outline: none;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-size:17px;
-    font-weight:bold;
-    padding: 0px 15px 15px 15px;
-    text-decoration:none;
 }
 
 .submitButton:hover{
@@ -196,16 +200,6 @@ input
 
 .deleteButton{
     background-color: #E03616; 
-    border-radius:5px;
-    border:none;
-    outline: none;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-size:17px;
-    font-weight:bold;
-    padding: 0px 15px 15px 15px;
-    text-decoration:none;
 }
 
 .deleteButton:hover{
@@ -223,16 +217,7 @@ input
 
 .backButton{
     background-color: #D3D3D3; 
-    border-radius:5px;
-    border:none;
-    outline: none;
-    display:inline-block;
-    cursor:pointer;
-    color:black;
-    font-size:17px;
-    font-weight:bold;
-    padding: 0px 15px 15px 15px;
-    text-decoration:none;
+    color: black;
 }
 
 .backButton:hover{
@@ -255,16 +240,6 @@ input
 
 .settingsButton{
     background-color: #ffb82b; 
-    border-radius:5px;
-    border:none;
-    outline: none;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-size:17px;
-    font-weight:bold;
-    padding: 0px 15px 15px 15px;
-    text-decoration:none;
 }
 
 .settingsButton:hover{
@@ -524,4 +499,18 @@ option{
     font-weight: bold;
     font-size: 40px;
     text-align: right;
+}
+
+.invoiceButton{
+    background-color: #17a2b8; 
+    border-radius:5px;
+    border:none;
+    outline: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:bold;
+    padding: 0px 15px 15px 15px;
+    text-decoration:none;
 }

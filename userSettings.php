@@ -16,8 +16,8 @@ $loggedInUser = $_SESSION['login'];
         <title>User Settings</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
         <?php $loggedInUser->user_backgroundColorSelect(); ?>
@@ -39,7 +39,7 @@ $loggedInUser = $_SESSION['login'];
                     
                     <br><br>
                     
-                    <button class="submitButton" type="submit" name="updateUserInfoSubmit"><i class="material-icons">info</i>Update user info</button>
+                    <button class="button submitButton" type="submit" name="updateUserInfoSubmit"><i class="material-icons">info</i>Update user info</button>
                 </form>
                 <?php
                 if(isset($_GET["userInfo"])){
@@ -54,7 +54,7 @@ $loggedInUser = $_SESSION['login'];
                     <input type="password" name="currentPassword" placeholder="Enter your current password" required>
                     <input type="password" name="newPassword" placeholder="Enter a new password" required>
                     <input type="password" name="repeatPassword" placeholder="Repeat the new password" required>
-                    <button class="submitButton"type="submit" name="resetPasswordSubmit"><i class="material-icons">save</i>Save new password</button>
+                    <button class="button submitButton"type="submit" name="resetPasswordSubmit"><i class="material-icons">save</i>Save new password</button>
                 </form>
                 <?php
                 if(isset($_GET["passwordError"])){
@@ -77,7 +77,7 @@ $loggedInUser = $_SESSION['login'];
                         <tr>
                             <h2 class="userSettingh2">Upload a personal profile picture</h2>
                             <td><input class="uploadProfilePicture" type="file" name="profilePicture"></td>
-                            <td><button class="submitButton" type="submit" name="uploadProfilePictureSubmit"><i class="material-icons">image</i>Upload</button></td>
+                            <td><button class="button submitButton" type="submit" name="uploadProfilePictureSubmit"><i class="material-icons">image</i>Upload</button></td>
                         </tr>
                     </table>
                 </form> 
@@ -112,7 +112,7 @@ $loggedInUser = $_SESSION['login'];
                                     }
                                 ?>
                             </td>
-                            <td><button type="submit" class="submitButton" name="changeUserBackgroundSubmit"><i class="material-icons">color_lens</i>Change color</button></td>
+                            <td><button type="submit" class="button submitButton" name="changeUserBackgroundSubmit"><i class="material-icons">color_lens</i>Change color</button></td>
                         </tr>
                     </table>
                 </form>
@@ -125,7 +125,7 @@ $loggedInUser = $_SESSION['login'];
                 ?>
             <hr>
             <form action="userSettings_deleteAllCookies.php" method="POST" enctype="multipart/form-data">
-                <button onclick="return confirm('Are you sure you want to delete All 631290.infHaarlem.nl Cookies?')" class="deleteButton" type="submit" name="deleteAllCookies"><i class="material-icons">delete_forever</i>DELETE ALL COOKIES</button>
+                <button onclick="return confirm('Are you sure you want to delete All 631290.infHaarlem.nl Cookies?')" class="button deleteButton" type="submit" name="deleteAllCookies"><i class="material-icons">delete_forever</i>DELETE ALL COOKIES</button>
             </form>
             <?php
                 if(isset($_GET["cookiesDeleted"])){
@@ -135,7 +135,7 @@ $loggedInUser = $_SESSION['login'];
                 }
                 ?>
             <hr>
-            <a href="index.php"><button class="backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
+            <a href="index.php"><button class="button backButton"><i class="material-icons">arrow_back</i>BACK</button></a>
             </div>
         </div>
         
